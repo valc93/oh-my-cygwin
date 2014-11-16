@@ -6,7 +6,7 @@ APT_CYG="$(mktemp /tmp/apt-cyg.XXXXXXXX)"
 
 # install apt-cyg
 wget --no-check-certificate "rawgit.com/transcode-open/apt-cyg/master/apt-cyg" -O "${APT_CYG}"
-if [ $(uname -m) == 'i686' ]; then arch="x86"; else arch="x86_64"; fi; sed -i "s/\(wget -N \$mirror\)\(\/setup\..*\)/\1\/$arch\2/" /usr/local/bin/apt-cyg
+if [ $(uname -m) == 'i686' ]; then arch="x86"; else arch="x86_64"; fi; sed -i "s/\(wget -N \$mirror\)\(\/setup\..*\)/\1\/$arch\2/" "${APT_CYG}"
 chmod +x "${APT_CYG}"
 
 # install some stuff like vim and git
