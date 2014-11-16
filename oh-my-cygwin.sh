@@ -10,7 +10,7 @@ if [ $(uname -m) == 'i686' ]; then arch="x86"; else arch="x86_64"; fi; sed -i "s
 chmod +x "${APT_CYG}"
 
 # install some stuff like vim and git
-"${APT_CYG}" install zsh mintty vim curl git openssh ftp make tar
+"${APT_CYG}" install zsh mintty vim curl git openssh
 
 
 # install OH MY ZSH
